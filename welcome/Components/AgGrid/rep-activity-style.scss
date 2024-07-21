@@ -1,0 +1,46 @@
+@import "@styles/stylesheets/scss/utils/helpers.scss";
+@import "@styles/stylesheets/scss/utils/colors.scss";
+@import "@styles/stylesheets/scss/utils/font-settings.scss";
+
+
+@mixin rep-activity-style {
+    .ag-header-group-cell {
+        display: flex;
+        align-items: center;
+        // height: 100%;
+        position: absolute;
+        background: $color-slate;
+        color: $color-white;
+        font-size: $font-size-small;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-right: $size-xxxsmall solid $color-white;
+        border-bottom: $size-xxxsmall solid $color-white;
+    }
+    .ag-header-cell {
+        background: #f0f2f7;
+        color: #404255;
+        font-size: $font-size-xsmall;
+        font-weight: 600;
+        border-right: $size-xxxsmall solid #dde0eb;
+        border-bottom: $size-xxxsmall solid #dde0eb;
+    }
+    .ag-cell {
+        border-right: $size-xxxsmall solid #dde0eb;
+        border-left: $size-xxxsmall solid #dde0eb;
+        padding: 12px;
+    }
+
+    .ag-header-group-cell-label {
+        justify-content: center;
+    }
+
+    .header-section {
+        padding: 10px;
+    }
+
+    .ag-header-group-text{
+        padding: 10px;
+    }
+
+}
