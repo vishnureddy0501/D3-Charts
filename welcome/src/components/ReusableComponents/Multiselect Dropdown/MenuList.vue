@@ -125,14 +125,11 @@
 </script>
 
 <style lang="scss" scoped>
-@import '@styles/stylesheets/scss/utils/colors.scss';
-@import '@styles/stylesheets/scss/utils/font-settings.scss';
-@import '@styles/stylesheets/scss/utils/helpers.scss';
 
 .disable {
     cursor: no-drop !important;
-    color: $color-midnight-grey-40 !important;
-    font-weight: $font-weight-bold;
+    color: #9a9a9a !important;
+    font-weight: 600;
 }
 
 .menu-list-item {
@@ -149,18 +146,18 @@
     .cb-wrapper {
         .label {
             .cb {
-                color: $color-midnight-40;
+                color: #9FA6E5;
                 margin-top: 0.125rem;
             }
         }
         .label:hover input~.cb {
-            color: $color-midnight-40;
+            color: #9FA6E5;
         }
         .label input:checked~.cb {
-            color: $color-plan;
+            color: #f04e45;
         }
         .label:hover input:checked~.cb {
-            color: $color-plan;
+            color: #f04e45;
         }
     }
 }
@@ -171,43 +168,43 @@
     .select-all {
         font-size: 0.875rem;
         font-weight: normal;
-        color: $color-midnight-grey-60;
+        color: #6F7288;
     }
 }
 
 .users-count {
     font-size: 0.875rem;
     font-weight: normal;
-    color: $color-midnight-grey-60;
+    color: #6F7288;
 }
 
 .select-all-count {
     display: flex;
     justify-content: space-between;
-    margin-top: $margin-size-small-medium;
+    margin-top: 12px;
     margin-right: 0.625rem;
     margin-left: 1.2rem;
 }
 
 .filter-search {
     position: relative;
-    padding: $padding-size-small $margin-size-medium/2 0;
+    padding: 0.625rem 7.5px 0;
     margin-left: 0.625rem;
 
     &-input {
-        font-size: $font-size-small;
-        font-weight: $font-weight-normal;
-        padding: 0.375rem 2.063rem $padding-size-xsmall 1.875rem;
-        border-radius: $border-radius-average;
-        border: solid 0.0625rem $color-midnight-grey-20;
-        background-color: $color-white;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 0.375rem 2.063rem 0.313rem 1.875rem;
+        border-radius: 4px;
+        border: solid 0.0625rem #c7cbd6;
+        background-color: white;
     }
 
     &-icon {
         position: absolute;
         left: 1rem;
         top: 1.17rem;
-        color: $color-midnight-grey-20;
+        color: #c7cbd6;
         font-size: 1rem;
     }
 }

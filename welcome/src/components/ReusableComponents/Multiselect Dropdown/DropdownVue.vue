@@ -151,9 +151,6 @@
 </script>
 
 <style scoped lang="scss">
-@import '@styles/stylesheets/scss/utils/colors.scss';
-@import '@styles/stylesheets/scss/utils/font-settings.scss';
-@import '@styles/stylesheets/scss/utils/helpers.scss';
 .selected-option {
     height: 1.438rem;
     flex-grow: 0;
@@ -163,8 +160,8 @@
     align-items: center;
     gap: 0.75rem;
     padding: 0.25rem 0.375rem;
-    border-radius: $border-radius-average;
-    background-color: $color-purple-light;
+    border-radius: 4px;
+    background-color: #eceefd;
 
     .label-text {
         height: 0.938rem;
@@ -177,10 +174,10 @@
         line-height: normal;
         letter-spacing: normal;
         text-align: left;
-        color: $color-midnight-grey-80;
+        color: #404255;
     }
     .cancel {
-        color: $color-midnight-grey-80;
+        color: #404255;
     }
 }
 

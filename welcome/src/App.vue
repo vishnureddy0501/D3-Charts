@@ -1,10 +1,13 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <repActivity />
 </template>
 <script>
-
+import repActivity from './components/AgGrid/repActivity.vue';
 export default {
   name: 'App',
+  components: {
+    repActivity
+  }
 }
 </script>
 

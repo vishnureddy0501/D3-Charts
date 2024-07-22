@@ -315,8 +315,8 @@
             font-size: 10px;
             font-weight: bold;
             text-transform: uppercase;
-            border-right: $size-xxxsmall solid white;
-            border-bottom: $size-xxxsmall solid white;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
         }
     }
 
