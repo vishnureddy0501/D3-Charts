@@ -20,9 +20,44 @@
 </script>
 
 <style lang="scss" scoped>
-    @import './rep-activity-style.scss';
-    ::v-deep {
-        @include rep-activity-style;
+    :deep(.ag-header-group-cell) {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        background: #151b42;
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-right: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+
+    :deep(.ag-header-cell) {
+        background: #f0f2f7;
+        color: #404255;
+        font-size: 10px;
+        font-weight: 600;
+        border-right: 1px solid #dde0eb;
+        border-bottom: 1px solid #dde0eb;
+    }
+
+    :deep(.ag-cell) {
+        border-right: 1px solid #dde0eb;
+        border-left: 1px solid #dde0eb;
+        padding: 12px;
+    }
+
+    :deep(.ag-header-group-cell-label) {
+        justify-content: center;
+    }
+
+    :deep(.header-section) {
+        padding: 10px;
+    }
+
+    :deep(.ag-header-group-text) {
+        padding: 10px;
     }
 
     .rep-activity-wrapper {
@@ -31,11 +66,9 @@
             display: flex;
             justify-content: space-between;
             .rep-activity-opp {
-                ::v-deep {
-                    .option {
-                        label {
-                            margin: 0;
-                        }
+                :deep(.option) {
+                    label {
+                        margin: 0;
                     }
                 }
             }
