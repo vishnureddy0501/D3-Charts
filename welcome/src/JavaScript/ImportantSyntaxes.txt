@@ -1,0 +1,24 @@
+const obj = {
+    'vishnu': {
+        father: "rams",
+        mother: "vijs"
+    },
+        'sneha': {
+        father: "rams",
+        mother: "vijs"
+    },
+    'kar': {
+        father: "kots",
+        mother: "sravs"
+    }
+}
+const objToArray = []
+for (const key in obj) {
+objToArray.push(
+    {
+        name: key,
+        ...obj[key]
+    }
+)
+}
+console.log(objToArray);

@@ -41,7 +41,7 @@
 
 <script>
     import MultiSelectMenuList from '@src/components/app-comps/AppMultiSelectMenuList.vue';
-    import { mixin as clickaway } from 'vue-clickaway2';
+    import { mixin as clickaway } from 'vue3-click-away';
 
     export default {
 
