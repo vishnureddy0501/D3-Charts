@@ -1,0 +1,6 @@
+element.getBoundingClientRect(); // it has all the properties related to class
+
+
+scrollWidth vs offsetwidth:
+-------------------------------
+What it Represents: The scrollWidth property returns the width of an element's content, including content not visible on the screen due to overflow. In other words, it includes the width of the element's content even if it overflows (i.e., if there's a horizontal scrollbar).

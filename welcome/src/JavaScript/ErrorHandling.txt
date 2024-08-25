@@ -1,0 +1,25 @@
+Error handling using try and catch block:
+-----------------------------------------
+try {
+    let data = value + 10;
+    // value is not defined so it will throw an error. Handle it using catch block
+} 
+catch (err) {
+    console.log("undefined variable", err.message);
+}
+
+what it the use of throw block:
+---------------------------------
+throw passes the error to the catch block.
+
+try {
+    let age = 25;
+    if(age < 18) {
+        throw new Error("under Age");
+    } else {
+        console.log("registration successul");
+    }
+}
+catch (err) {
+    console.log(err.message);
+}
