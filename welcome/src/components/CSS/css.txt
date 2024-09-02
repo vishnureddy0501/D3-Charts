@@ -1,0 +1,105 @@
+media queries:
+---------------
+A media query consists of a media type and at least one condition that must be true for the styles to apply.
+
+Common media types include:
+
+    all: Default. Suitable for all devices.
+    screen: For computer screens, tablets, smartphones, etc.
+    print: For printed material and documents viewed on a screen in print preview mode.
+
+Media Features
+
+    width and height: The width and height of the viewport.
+    min-width and max-width: Minimum and maximum width of the viewport.
+    min-height and max-height: Minimum and maximum height of the viewport.
+
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-color: lightcoral;
+  }
+}
+
+
+// comma means OR. and means AND
+@media screen and (min-width: 600px), print and (min-resolution: 300dpi) {
+  body {
+    font-size: 16px;
+  }
+}
+
+usage of only:
+-------------
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+
+Animations:
+-------------
+animation-name // name of animation
+animation-duration // how much duration animation has to run
+animation-delay // animation has to execute after some delay
+animation-direction // direction of animation
+animation-iteration-count // how many times animation has to execute
+animation-fill-mode
+
+eg: 
+@keyframes slideAndFade {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
+
+.element {
+  animation-name: slideAndFade;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: 3;
+  animation-fill-mode: forwards;
+}
+
+Explanation of Properties
+-------------------------
+    animation-name:
+        Effect: The element will use the slideAndFade keyframes defined above.
+
+    animation-duration:
+        Description: Specifies the length of time an animation should take to complete one cycle.
+        Example: animation-duration: 2s;
+        Effect: The animation will take 2 seconds to complete one cycle.
+
+    animation-delay:
+        Description: Specifies when the animation will start.
+        Example: animation-delay: 1s;
+        Effect: The animation will start 1 second after it is applied to the element.
+
+    animation-direction:
+        Description: Specifies whether the animation should play in reverse on alternate cycles.
+        Example: animation-direction: alternate;
+        Effect: The animation will alternate direction, playing forward first, then backward.
+
+    animation-iteration-count:
+        Description: Specifies the number of times an animation should be played.
+        Example: animation-iteration-count: 3;
+        Effect: The animation will play 3 times.
+
+    animation-fill-mode:
+        Description: Specifies how a CSS animation applies styles to its target before and after its execution.
+        Example: animation-fill-mode: forwards;
+        Effect: The element will retain the styles defined in the 100% keyframe after the animation completes.

@@ -17,7 +17,7 @@ export default {
     methods: {
         handleClick () {
             console.log(this.$refs.name);
-            const name = this.$refs.name; // for accessing the hardcoded ref name
+            const name = this.$refs.name; // for accessing the hardcoded ref name. you can do this also this.$refs['name']
             // const name1 = this.$refs['item-0']; for accessing the dynamic ref name;
             name.style.marginLeft = '50px';
             console.log(name.getBoundingClientRect(),name.offsetHeight, name.offsetWidth);

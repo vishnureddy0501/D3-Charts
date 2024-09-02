@@ -1,0 +1,28 @@
+transform: translate(40px,100px);
+transform: rotate(20deg);
+transform: rotate(-20deg); // using negative values will rotate in counter clockwise.
+transform: scale(2, 3); // width increased by 2times and height increased by 3times.
+transform: scaleX(2); // changes width
+transform: scaleY(2);  // changes height
+
+
+skew: distort an element along the X and/or Y axes by a specified angle. 
+        This transformation skews the shape of an element, making it appear slanted.
+transform: skew(20deg, 20deg); //slant x-axis and y-axis
+transform: skewX(20deg); //slant the x-axis
+transform: skewY(20deg);  // slant y-axis
+
+transform: skew(20deg, 20deg) rotate(20deg) scaleY(10) scaleX(0.5);
+
+
+3D transformations:
+-------------------
+include z-axis also
+
+
+how to give background image:
+-----------------------------
+background: url('give image url here');
+
+
+

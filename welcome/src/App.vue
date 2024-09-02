@@ -1,33 +1,39 @@
 <template>
   <div>
-    <!-- <div v-for="item in items">
-      <input type="checkbox" v-model="item.value" @change="handleCheckbox">
-      <div class="label">{{ item.label }}</div>
-    </div>
-    <div v-for="(item, index) in radios">
-      <input type="radio" :checked="item.value" @change="handleRadios(index)">
-      <div class="label">{{ item.label }}</div>
-    </div>
+    <div class="">Learning Vue js</div>
+    <i class="fa-solid fa-pencil"></i>
+    <loadingAnimation />
+    <toolTips />
+    <Transitions />
+
+    <d3Graph />
+    <!--
     <div>
       <select @change="handleChange($event)">
         <option v-for="(item,index) in options" :key="index + item.value" :value="item.value">{{ item.label }}</option>
       </select>
     </div> -->
-    <div class="hello" @mouseover="handleEvent" @mouseleave="handleEvent" @mouseup="handleEvent">
-      hello world programming
-    </div>
     <refs />
   </div>
   <!-- <repActivity /> -->
 </template>
 <script>
+import loadingAnimation from './components/CSS/LoadingAnimation.vue';
+import toolTips from './components/CSS/toolTips.vue';
+import Transitions from './components/CSS/Transitions.vue'
+
 import repActivity from './components/AgGrid/repActivity.vue';
 import refs from "./components/ReusableComponents/Refs.vue"
+import d3Graph from "./components/D3/D3Graph.vue";
 export default {
   name: 'App',
   components: {
     repActivity,
-    refs
+    refs,
+    d3Graph,
+    loadingAnimation,
+    toolTips,
+    Transitions
   },
   data () {
     return {
@@ -76,7 +82,6 @@ export default {
         sortedData.splice(index, 0, data[i]);
       }
     }
-    console.log(sortedData);
   },
   methods: {
     handleScrollend (event) {

@@ -1,0 +1,12 @@
+Center Align Elements
+----------------------
+To horizontally center a block element (like <div>), use margin: auto;
+center align a image horizontally:
+--------------------------------
+margin-left: auto;
+margin-right: auto;
+
+(or)
+
+append image in div and give flex with justify-content: space around
+
