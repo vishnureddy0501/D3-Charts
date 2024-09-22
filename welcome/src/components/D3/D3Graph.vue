@@ -1,6 +1,5 @@
 <template>
   <div class="display-graphs">
-    <inputs />
     <div id="bar-chart"></div>
     <lineGraphView />
     <areaGraph />
@@ -11,7 +10,6 @@
   import * as d3 from 'd3';
   import lineGraphView from "./D3LineGraph.vue"
   import areaGraph from './AreaGraph.vue';
-  import inputs from './Inputs.vue'
   
   export default {
     mounted() {
@@ -19,8 +17,7 @@
     },
     components: {
       lineGraphView,
-      areaGraph,
-      inputs
+      areaGraph
     },
     methods: {
       createChart() {
