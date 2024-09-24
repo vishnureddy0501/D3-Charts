@@ -3,6 +3,7 @@
     <div id="bar-chart"></div>
     <lineGraphView />
     <areaGraph />
+    <PentagonChartVue />
     <div class="tooltip"></div>
   </div>
   </template>
@@ -10,6 +11,7 @@
   import * as d3 from 'd3';
   import lineGraphView from "./D3LineGraph.vue"
   import areaGraph from './AreaGraph.vue';
+  import PentagonChartVue from './PentagonChart.vue';
   
   export default {
     mounted() {
@@ -17,7 +19,8 @@
     },
     components: {
       lineGraphView,
-      areaGraph
+      areaGraph,
+      PentagonChartVue
     },
     methods: {
       createChart() {

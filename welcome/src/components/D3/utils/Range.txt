@@ -1,0 +1,17 @@
+d3.range(): takes range as input and outputs array.
+----------
+
+const numSides = 5;
+const range = d3.range(numSides);
+console.log(range);  // Output: [0, 1, 2, 3, 4]
+
+Here, d3.range(numSides) creates an array [0, 1, 2, 3, 4]. This is equivalent to running a loop from 0 to numSides - 1.
+
+How d3.range Works:
+--------------------
+    d3.range(n) generates an array of numbers from 0 up to (but not including) n.
+    You can pass additional arguments to specify a start, stop, and step (increment).
+
+Example with a step:
+---------------------
+d3.range(0, 10, 2);  // Output: [0, 2, 4, 6, 8]

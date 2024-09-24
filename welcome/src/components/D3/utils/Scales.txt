@@ -1,0 +1,23 @@
+scaleOrdinal: (one - one mapping)
+------------
+const subgroups = ['total', 'female', 'male'];
+const colorScale = d3.scaleOrdinal()
+  .domain(subgroups)
+  .range(['red', 'blue', 'green']);
+
+what is the use of nice()?
+-------------------------
+Round Figures.
+
+const yScale = d3.scaleLinear()
+    .domain([0, d3.max(data, d => d.total)])
+    .nice() // round figures
+    .range([container.height, 0]);
+
+when to use scaleBand() ?
+--------------------------
+for categorical data.
+
+when to use scaleLinear ?
+-------------------------
+for NUmerical data.

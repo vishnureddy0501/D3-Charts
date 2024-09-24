@@ -1,0 +1,29 @@
+What is a <g> Tag?
+------------------
+The <g> tag in SVG is used to group other SVG elements together. This allows you to apply transformations (like translation, scaling, or rotation) to the group as a whole, which can be more efficient and cleaner than applying transformations to each individual element.
+
+When to Use a <g> Tag
+--------------------
+    When you have multiple elements that should share the same attributes or transformations, you can group them within a <g> tag.
+    Example: Grouping all bars in a bar chart so you can translate the entire group to a specific position.
+
+eg: svg.append("g")
+   .attr("class", "bars")
+   .selectAll("rect")
+   .data(data)
+   .enter()
+   .append("rect")
+   .attr("x", d => xScale(d.year))
+   .attr("y", d => yScale(d.value))
+   .attr("width", xScale.bandwidth())
+   .attr("height", d => height - yScale(d.value));
+
+ eg: svg.append("g")
+   .attr("transform", "translate(50, 20)") // Move entire group
+   .selectAll("circle")
+   .data(data)
+   .enter()
+   .append("circle")
+   .attr("cx", d => xScale(d.x))
+   .attr("cy", d => yScale(d.y))
+   .attr("r", 5);
