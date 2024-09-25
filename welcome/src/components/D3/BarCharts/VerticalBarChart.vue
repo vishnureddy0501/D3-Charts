@@ -111,15 +111,20 @@ export default {
 				.attr("rx", 5) // Set the x-axis border radius
   				.attr("ry", 5); // Set the y-axis border radius
 
-		// Tooltip
-		const tooltip = d3.select("#vertical-bar-chart")
-			.append("div")
-			.attr("class", "tooltip")
-			.style("position", "absolute")
-			.style("background-color", "#151b42")
-			.style("color", "white")
-			.style("padding", "6px")
-			.style("opacity", "0");
+			// Tooltip
+			const tooltip = d3.select("#vertical-bar-chart")
+				.append("div")
+				.attr("class", "tooltip")
+				.style("position", "absolute")
+				.style("background-color", "white")
+				.style("color", "#333")
+				.style("padding", "8px")
+				.style("border-radius", "4px")
+				.style("border", "1px solid #ddd")
+				.style("box-shadow", "0px 4px 10px rgba(0, 0, 0, 0.1)")
+				.style("font-size", "0.875rem")
+				.style("opacity", "0")
+				.style("pointer-events", "none");  // Prevent blocking mouse interactions
 
 		svg.selectAll("rect")
 			.on("mouseover", (event, d) => {
@@ -136,8 +141,8 @@ export default {
 						.style("opacity", 0.5); // Set opacity for non-hovered bars
 
 					tooltip.html(`<div>${d.key}: ${d.value}</div>`)
-						.style("left", `${event.pageX - containerChart.left + 20}px`)
-						.style("top", `${event.pageY}px`)
+						.style("left", `${event.clientX - containerChart.left + 20}px`)
+						.style("top", `${event.clientY}px`)
 						.style("opacity", 1);
 				}
 			})
@@ -145,8 +150,8 @@ export default {
 				const containerChart = document.querySelector("#vertical-bar-chart").getBoundingClientRect();
 				if (d) {
 					tooltip.html(`<div>${d.key}: ${d.value}</div>`)
-						.style("left", `${event.pageX - containerChart.left + 20}px`)
-						.style("top", `${event.pageY}px`)
+						.style("left", `${event.clientX - containerChart.left + 20}px`)
+						.style("top", `${event.clientY}px`)
 						.style("opacity", 1);
 				}
 			})

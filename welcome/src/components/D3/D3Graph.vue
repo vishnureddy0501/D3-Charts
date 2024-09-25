@@ -82,7 +82,6 @@
               .style("opacity", 1);
             })
             .on('mouseout', ()=>{
-              console.log("mose out");
               tooltip.style("opacity", 0); 
             });
       }

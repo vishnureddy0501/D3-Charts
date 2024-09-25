@@ -1,0 +1,5 @@
+barchart drawing:
+-----------------
+always use the barchart with subgroups.
+if no subgroups then we can keep the number of subgroups as 1.
+the same code helps for both with and without subgroups.
